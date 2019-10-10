@@ -1,22 +1,24 @@
 // double check file path
-const jewelry = require('./jewelry.js');
-const housewares = require('./housewares.js');
-const accessories = require('./accessories.js');
-const toys = require('./toys.js');
-// import reviews from './reviews.json';
+const jewelry = require('../jewelry.js');
+const housewares = require('../housewares.js');
+const accessories = require('../accessories.js');
+const toys = require('../toys.js');
+
 /** import YOUR port number here */
-const { port } = require('./server/server.js')
+const { port } = require('../server/server.js')
 
 const faker = require('faker');
 const mongoose = require('mongoose');
+
 mongoose.connect(`mongodb://localhost:${port}/products`, {useNewUrlParser: true})
+
 //connect that shit
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log(`we're connected!`)
-
 })
+
 const imagesSchema = new mongoose.Schema({
   listing_image_id: Number,
   listing_id: Number,

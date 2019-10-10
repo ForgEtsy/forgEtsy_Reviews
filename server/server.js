@@ -1,6 +1,6 @@
 const express = require('express')
-const axios = require('axios');
-const db = require('../db.js')
+// const axios = require('axios');
+const db = require('../db/db.js')
 
 const app = express();
 
