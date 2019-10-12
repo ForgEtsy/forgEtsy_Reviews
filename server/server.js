@@ -1,5 +1,5 @@
-const express = require('express')
-const db = require('../db/db.js');
+const express = require('express');
+const { reviews, products } = require('../db/db.js');
 var cors = require('cors');
 
 const app = express();
@@ -11,7 +11,12 @@ app.use(express.urlencoded({extended: true}));
 let port = 3004;
 
 app.get('/', function (req, res) {
-  res.send('GET request to homepage')
+  let test = Promise.resolve(reviews.find((err, result) => {
+    return result;
+  }));
+  test.then((val) => {
+    res.send(val);
+  });
 });
 
 app.listen(port, () => {
