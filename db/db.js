@@ -1,4 +1,9 @@
-// double check file path
+// import mongoose and faker for schemas, import port number from server
+const mongoose = require('mongoose');
+const faker = require('faker');
+// const { port } = require('../server/server.js')
+
+// import data for schemas
 const jewelry = require('../data/jewelry.js');
 const housewares = require('../data/housewares.js');
 const accessories = require('../data/accessories.js');
@@ -7,21 +12,6 @@ const toys = require('../data/toys.js');
 // Require mongo schema to create mongo database
 const productSchema = require('../mongoSchema/productsSchema.js')
 const reviewSchema = require('../mongoSchema/reviewsSchema.js')
-
-/** import YOUR port number here */
-const { port } = require('../server/server.js')
-
-const faker = require('faker');
-const mongoose = require('mongoose');
-
-mongoose.connect(`mongodb://localhost:${port}/products`, {useNewUrlParser: true})
-
-//connect that shit
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log(`we're connected!`)
-})
 
 const Products = mongoose.model('Products', productSchema);
 const Reviews = mongoose.model('Reviews', reviewSchema);
