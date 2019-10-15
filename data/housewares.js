@@ -20,6 +20,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Scarf Color",
+              description_1: "Red",
+              description_2: "Pink",
+              description_3: "White"
+            },
+            {
+              title: "Size",
+              description_1: "5 inches x 13 inches",
+              description_2: "7 inches x 15 inches",
+              description_3: "9 inches x 17 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1315120565,
@@ -190,6 +204,20 @@ module.exports = {
               "WB713"
           ],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "56 inches x 110 inches",
+              description_2: "65 inches x 120 inches",
+              description_3: "74 inches x 145 inches"
+            },
+            {
+              title: "Butterly Count",
+              description_1: "2 - 3",
+              description_2: "3 - 4",
+              description_3: "4 - 6"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1637085030,
@@ -456,6 +484,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Frame Size",
+              description_1: "18 inches x 24 inches (Small)",
+              description_2: "24 inches x 30 inches (Medium)",
+              description_3: "30 inches x 36 inches (Large)"
+            },
+          ],
           "Images": [
               {
                   "listing_image_id": 2086496905,
@@ -582,6 +618,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Color",
+              description_1: "Light maple",
+              description_2: "Shade of Oak",
+              description_3: "Dark walnut"
+            },
+            {
+              title: "Dimensions",
+              description_1: "32 inches x 11 inches (Small)",
+              description_2: "34 inches x 13 inches (Medium)",
+              description_3: "36 inches x 15 inches (Large)"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2034686774,
@@ -666,6 +716,23 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Dimensions",
+              description_1: "Base: 5 inches, Width: 16.5 inches, Height: 10 inches (Small)",
+              description_2: "Base: 7 inches, Width: 18.5 inches, Height: 12 inches (Medium)",
+              description_3: "Base: 9 inches, Width: 20.5 inches, Height: 14 inches (Large)"
+            },
+            {
+              title: "Finishes",
+              description_1: "Raw Brass",
+              description_2: "Sealed Brass",
+              description_3: "Black & Brass",
+              description_3: "Matte Black",
+              description_3: "Matte White",
+              description_3: "Polished Nickel"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1692332448,
@@ -934,6 +1001,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "Small",
+              description_2: "Medium",
+              description_3: "Large"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2086493559,
@@ -1042,6 +1117,14 @@ module.exports = {
               "cs4846S"
           ],
           "is_vintage": true,
+          "product_options": [
+            {
+              title: "Dimensions (Diameter)",
+              description_1: "15 inches x 15 inches",
+              description_2: "17 inches x 17 inches",
+              description_3: "19 inches x 19 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1772884826,
@@ -1271,6 +1354,14 @@ module.exports = {
               "VTAB1"
           ],
           "is_vintage": true,
+          "product_options": [
+            {
+              title: "Dimensions",
+              description_1: "84.6 inches x 49.2 inches",
+              description_2: "94.2 inches x 54.4 inches",
+              description_3: "102.4 inches x 64.8 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1181018771,
@@ -1437,6 +1528,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "16 inches x 27 inches",
+              description_2: "18 inches x 29 inches",
+              description_3: "20 inches x 31 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2038875912,
@@ -1562,6 +1661,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "4 inches x 4 inches",
+              description_2: "5 inches x 5 inches",
+              description_3: "6 inches x 6 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1853710201,
@@ -1670,6 +1777,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Dimensions",
+              description_1: "5 inches",
+              description_2: "7 inches",
+              description_3: "9 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2086484711,
@@ -2085,6 +2200,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "18 inches x 18 inches",
+              description_2: "20 inches x 20 inches",
+              description_3: "22 inches x 22 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1689999639,
@@ -2211,6 +2334,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Size",
+              description_1: "7 inches x 7 inches",
+              description_2: "9 inches x 9 inches",
+              description_3: "11 inches x 11 inches"
+            },
+            {
+                title: "Color",
+                description_1: "Red",
+                description_2: "Blue",
+                description_3: "Black"
+              }
+          ],
           "Images": [
               {
                   "listing_image_id": 1955755839,
@@ -2830,6 +2967,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Dimensions",
+              description_1: "Width: 120 centimeters, Height: 100 centimeters",
+              description_2: "Width: 125 centimeters, Height: 110 centimeters",
+              description_3: "Width: 130 centimeters, Height: 120 centimeters"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1954094120,
@@ -3096,6 +3241,17 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+              title: "Color",
+              description_1: "Red",
+              description_2: "Orange",
+              description_3: "Blue",
+              description_3: "Green",
+              description_3: "Yellow",
+              description_3: "Purple"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1799730877,
@@ -3261,6 +3417,14 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Size",
+                description_1: "32 inches x 11 inches (Small)",
+                description_2: "34 inches x 13 inches (Medium)",
+                description_3: "36 inches x 15 inches (Large)"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2038884368,
@@ -3552,6 +3716,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Color",
+                description_1: "Red & White",
+                description_2: "Blue & White",
+                description_3: "Organge & White"
+            },
+            {
+                title: "Size",
+                description_1: "16 inches x 24 inches",
+                description_2: "18 inches x 26 inches",
+                description_3: "20 inches x 28 inches"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 1680430452,
@@ -4100,6 +4278,20 @@ module.exports = {
           "used_manufacturer": false,
           "sku": [],
           "is_vintage": false,
+          "product_options": [
+            {
+                title: "Size",
+                description_1: "8.5oz (Generic Children)",
+                description_2: "12oz (Coffee Mug)",
+                description_3: "14oz (Ozark Wine)",
+                description_4: "20oz (Ozark)",
+                description_5: "20oz (Skinny)",
+                description_6: "30oz (Skinny)", 
+                description_7: "30oz (Ozark)",
+                description_8: "20oz (YETI Rambler)",
+                description_9: "30oz (YETI Rambler)"
+            }
+          ],
           "Images": [
               {
                   "listing_image_id": 2086487535,
