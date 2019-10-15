@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // connecting mongo container to mongo service container
-mongoose.connect(`mongodb://mongo:27017/docker-node-mongo`, {useNewUrlParser: true})
+mongoose.connect(`mongodb://mongo:27017/forgEtsy_Reviews`, {useNewUrlParser: true})
 
 //connect that shit
 const db = mongoose.connection;
