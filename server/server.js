@@ -11,14 +11,19 @@ app.use(express.urlencoded({extended: true}));
 let port = 3004;
 
 app.get('/reviews', function (req, res) {
-  console.log(req.query.product_id);
+  // console.log(req.query.product_id);
   let product_id = req.query.product_id;
-  let test = Promise.resolve(Reviews.find((err, result) => {
-    return result;
-  }));
-  test.then((val) => {
+  // let product_reviews = {};
+  
+  return new Promise((resolve, reject) => {
+    Reviews.find({'product_id': product_id}, (err, result) => {
+      if (err) { return reject(err) }
+        return resolve(result);
+    })
+  })
+  .then((val) => {
     res.send(val);
-  });
+  })
 });
 
 app.listen(port, () => {
