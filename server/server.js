@@ -11,10 +11,10 @@ app.use(express.urlencoded({extended: true}));
 let port = 3004;
 
 app.get('/reviews', function (req, res) {
-  // console.log(req.query.product_id);
+  // create variable to store product ID of requested reviews
   let product_id = req.query.product_id;
-  // let product_reviews = {};
   
+  // create new promise to await response from Mongo 'find' query
   return new Promise((resolve, reject) => {
     Reviews.find({'product_id': product_id}, (err, result) => {
       if (err) { return reject(err) }
