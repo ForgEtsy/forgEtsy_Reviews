@@ -87,8 +87,8 @@ const reviewSchema = new mongoose.Schema({
   product_user_image_url: String,
 })
 
-const products = mongoose.model('Products', productSchema);
-const reviews = mongoose.model('Reviews', reviewSchema);
+const Products = mongoose.model('Products', productSchema);
+const Reviews = mongoose.model('Reviews', reviewSchema);
 
 const reviewsSave = reviews => {
   Reviews.insertMany(reviews)
@@ -143,4 +143,4 @@ const productsSave = products => {
 // productsSave(accessories.results);
 // productsSave(toys.results);
 
-module.exports = { reviews, products };
+module.exports = { Reviews, Products };
