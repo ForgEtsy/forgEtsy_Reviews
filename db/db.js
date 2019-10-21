@@ -3,10 +3,10 @@ const jewelry = require('../jewelry.js');
 const housewares = require('../housewares.js');
 const accessories = require('../accessories.js');
 const toys = require('../toys.js');
+const axios = require('axios');
 
 /** import YOUR port number here */
 const { port } = require('../server/server.js')
-
 const faker = require('faker');
 const mongoose = require('mongoose');
 
@@ -96,7 +96,7 @@ const reviewsSave = reviews => {
       console.log('...Saved reviews to database...')
     })
     .catch((err) => {
-      console.log('...review saving err... :(', err);
+      console.log('...review saving err... ', err);
     })
 }
 
@@ -104,43 +104,70 @@ const productsSave = products => {
   Products.insertMany(products)
     .then((data) => {
       console.log('...Saved products to database...')
-      const reviews = [];
-      for(let i = 0; i < data.length; i++){
+      
+      let listingIDs = [];
+      let descriptions = [];
+      let reviews = [];
+
+      for (let i = 0; i < data.length; i++) {
         let listing_id = data[i].listing_id;
         let max = 6;
         let min = 4;
-        const random = Math.floor((Math.random() * (max - min)) + min+1);
-        for(let j = 0; j < random; j++){
+        let random = Math.floor((Math.random() * (max - min)) + min+1); 
+
+        // create an async/await response for API GET request to Ron Swanon quote generator
+        async function getNewReview() {
+          let res = await axios.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes');
+          return res;
+        }
+
+        for (var x = 0; x < random; x++) {
+          descriptions.push(getNewReview()); 
+          listingIDs.push(listing_id);
+        }
+      }
+
+      Promise.all(descriptions)
+      .then(response => {
+
+        function randomIntFromInterval(min, max) { // min and max included 
+          return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+
+        for (var i = 0; i < response.length; i++) {
+          let j = randomIntFromInterval(1, 1000);
+          console.log('This is the data in the response ' + response[i].data);
           let review = {
-            review_id: Number(`${listing_id}${i}${j}`),
+            review_id: Number(`${listingIDs[i]}${i}${j}`),
             date: faker.date.past(45),
-            description: faker.lorem.sentences(),
+            description: response[i].data[0],
             rating: Math.floor((Math.random() * 6)),
             user_name: `${faker.name.firstName()} ${faker.name.lastName()}`,
             user_photo_url: faker.image.avatar(),
-            product_id: listing_id,
-            product_user_image_url: 'FIND A ONE THINGY PICTURE ITEM BOI',
+            product_id: listingIDs[i],
+            product_user_image_url: 'FIND A ONE THINGY PICTURE ITEM BOI'
           }
+
           reviews.push(review);
         }
-      }
-      return reviews;
-    })
-    .then((reviews) => {
-      reviewsSave(reviews);
-    })
-    .then((data) => {
-      // populate component with data
 
+        return reviews;
+      })
+      .then((reviews) => {
+        reviewsSave(reviews);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
     })
     .catch((err) => {
-      console.log('...product saving err... :(');
+      console.log(err);
     })
 }
 
-// productsSave(jewelry.results);
-// productsSave(housewares.results);
-// productsSave(accessories.results);
-// productsSave(toys.results);
+productsSave(jewelry.results);
+productsSave(housewares.results);
+productsSave(accessories.results);
+productsSave(toys.results);
 
 module.exports = { Reviews, Products };
